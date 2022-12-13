@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct SwiftCodeGenerator {
+public struct SwiftCodeGenerator {
     /// This method is used when only one Swift file is being generated.
-    static func generateCodeWithJSONUtilities(for swiftStruct: SwiftStruct) -> String {
+    public static func generateCodeWithJSONUtilities(for swiftStruct: SwiftStruct) -> String {
         return [
             preamble,
             "//",
@@ -26,7 +26,7 @@ struct SwiftCodeGenerator {
     }
     
     /// This method is used when multiple Swift files are being generated.
-    static func generateCode(for swiftStruct: SwiftStruct) -> String {
+    public static func generateCode(for swiftStruct: SwiftStruct) -> String {
         return [
             preamble,
             swiftStruct.toSwiftCode(),
@@ -34,7 +34,7 @@ struct SwiftCodeGenerator {
     }
     
     /// This method is used to only create the JSON utility code once when multiple Swift files are being generated.
-    static func generateJSONUtilities() -> String {
+    public static func generateJSONUtilities() -> String {
         return [
             preamble,
             jsonUtilitiesTemplate,

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import json2swift
 
 typealias ErrorMessage = String
 

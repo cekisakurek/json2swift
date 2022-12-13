@@ -1,4 +1,5 @@
 # json2swift
+For for SPM compatibility
 
 ![Overview](/images/json2swift.jpg)
 

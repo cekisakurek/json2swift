@@ -7,8 +7,8 @@
 //
 
 // MARK: - JSONElementSchema --> SwiftStruct
-internal extension SwiftStruct {
-    static func create(from jsonElementSchema: JSONElementSchema) -> SwiftStruct {
+extension SwiftStruct {
+    public static func create(from jsonElementSchema: JSONElementSchema) -> SwiftStruct {
         let name = jsonElementSchema.name.toSwiftStructName()
         let properties = SwiftProperty.createProperties(forStructBasedOn: jsonElementSchema)
         let parameters = SwiftParameter.createParameters(for: properties)
