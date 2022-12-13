@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import json2swift
 
 class swift_code_generation_custom_struct_tests: XCTestCase {
     func test_custom_struct() {

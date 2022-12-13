@@ -28,7 +28,7 @@ extension JSONElementSchema {
 
 // MARK: - JSONType extension
 extension JSONType {
-    fileprivate static func merge(attributes: JSONAttributeMap, with otherAttributes: JSONAttributeMap) -> JSONAttributeMap {
+    public static func merge(attributes: JSONAttributeMap, with otherAttributes: JSONAttributeMap) -> JSONAttributeMap {
         let attributeNames = Set(Array(attributes.keys) + Array(otherAttributes.keys))
         let mergedAttributes = attributeNames.map { name -> (String, JSONType) in
             let type = attributes[name] ?? .nullable
@@ -39,11 +39,11 @@ extension JSONType {
         return JSONAttributeMap(entries: mergedAttributes)
     }
     
-    internal func findCompatibleType(with type: JSONType) -> JSONType {
+    public func findCompatibleType(with type: JSONType) -> JSONType {
         return JSONType.compatible(with: self, and: type)
     }
     
-    private static func compatible(with type1: JSONType, and type2: JSONType) -> JSONType {
+    public static func compatible(with type1: JSONType, and type2: JSONType) -> JSONType {
         switch (type1, type2) {
         // Element
         case let (.element(r1, s1), .element(r2, s2)): return .element(isRequired: r1 && r2, schema: s1.merged(with: s2))

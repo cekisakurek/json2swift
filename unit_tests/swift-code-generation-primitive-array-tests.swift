@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import json2swift
 
 class swift_code_generation_primitive_array_tests: XCTestCase {
     

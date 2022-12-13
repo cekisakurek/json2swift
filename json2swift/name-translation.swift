@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal extension String {
+public extension String {
     func toSwiftStructName() -> String {
         let name = capitalizedWithoutInvalidChars.prefixedWithUnderscoreIfNecessary
         return name.isEmpty ? "DefaultStructName" : name

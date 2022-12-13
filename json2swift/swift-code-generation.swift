@@ -51,8 +51,8 @@ struct SwiftCodeGenerator {
 
 // MARK: - Implementation
 
-typealias SwiftCode = String
-typealias LineOfCode = SwiftCode
+public typealias SwiftCode = String
+public typealias LineOfCode = SwiftCode
 
 fileprivate struct Indentation {
     private let chars: String
@@ -216,7 +216,7 @@ fileprivate extension SwiftFailableInitializer {
 }
 
 // Internal for unit test access.
-internal extension TransformationFromJSON {
+extension TransformationFromJSON {
     var propertyName: String {
         switch self {
         case let .toCustomStruct(_, propertyName, _):           return propertyName
@@ -230,7 +230,7 @@ internal extension TransformationFromJSON {
         return "guard \(letStatement) else { return nil }"
     }
     
-    var letStatement: LineOfCode {
+    public var letStatement: LineOfCode {
         switch self {
         case let .toCustomStruct(       attributeName, propertyName, type): return TransformationFromJSON.letStatementForCustomStruct(  attributeName, propertyName, type)
         case let .toPrimitiveValue(     attributeName, propertyName, type): return TransformationFromJSON.letStatementForPrimitiveValue(attributeName, propertyName, type)

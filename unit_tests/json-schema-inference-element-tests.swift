@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import json2swift
 
 private let dummyName = "fake-element"
 

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import json2swift
 
 private let rars = JSONType.valueArray(isRequired: true,   valueType: .string(isRequired: true))
 private let raos = JSONType.valueArray(isRequired: true,   valueType: .string(isRequired: false))

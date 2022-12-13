@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - JSONElementSchema extension
 extension JSONElementSchema {
-    static func inferred(from jsonElementArray: [JSONElement], named name: String) -> JSONElementSchema {
+    public static func inferred(from jsonElementArray: [JSONElement], named name: String) -> JSONElementSchema {
         let jsonElement = [name: jsonElementArray]
         let schema = JSONElementSchema.inferred(from: jsonElement, named: name)
         let (_, attributeType) = schema.attributes.first!
@@ -21,7 +21,7 @@ extension JSONElementSchema {
         }
     }
     
-    static func inferred(from jsonElement: JSONElement, named name: String) -> JSONElementSchema {
+    public static func inferred(from jsonElement: JSONElement, named name: String) -> JSONElementSchema {
         let attributes = createAttributeMap(for: jsonElement)
         return JSONElementSchema(name: name, attributes: attributes)
     }

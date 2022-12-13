@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import json2swift
 
 private let ri = JSONType.number(isRequired: true,  isFloatingPoint: false)
 private let oi = JSONType.number(isRequired: false, isFloatingPoint: false)

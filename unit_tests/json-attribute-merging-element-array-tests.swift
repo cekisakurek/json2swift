@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import json2swift
 
 private let stringAttributeName = "string-attribute"
 private let boolAttributeName   = "bool-attribute"

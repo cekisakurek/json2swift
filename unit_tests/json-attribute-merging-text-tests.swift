@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import json2swift
 
 private let rd = JSONType.date(isRequired: true,  format: "M/d/yyyy")
 private let od = JSONType.date(isRequired: false, format: "M/d/yyyy")

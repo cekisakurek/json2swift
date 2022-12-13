@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import json2swift
 
 private let rb = JSONType.bool(isRequired: true)
 private let ob = JSONType.bool(isRequired: false)
